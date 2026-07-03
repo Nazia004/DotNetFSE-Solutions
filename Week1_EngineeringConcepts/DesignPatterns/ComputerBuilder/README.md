@@ -1,29 +1,34 @@
-# Builder Pattern Example
+# Builder Pattern
 
 ## Objective
 
-Demonstrate the Builder Design Pattern using C#.
+Construct complex Computer objects step by step.
 
-## Description
+## Pattern Type
 
-The Builder Pattern constructs a complex object step by step. It separates the construction process from the final representation.
+Creational Design Pattern
 
-## Classes
+## Components
 
-- Computer (Product)
-- ComputerBuilder (Abstract Builder)
-- GamingComputerBuilder (Concrete Builder)
-- Director
+- Computer
+- ComputerBuilder
+- Program
+
+## How It Works
+
+The builder sets individual parts of the computer and finally returns the completed object.
 
 ## Output
 
-```
+```text
 Computer Configuration
-CPU: Intel Core i9
-RAM: 32 GB
-Storage: 1 TB SSD
+CPU: Intel i7
+RAM: 16 GB
+Storage: 512 GB SSD
 ```
 
-## Pattern Used
+## Benefits
 
-Creational Design Pattern
+- Step-by-step construction
+- Better readability
+- Flexible object creation

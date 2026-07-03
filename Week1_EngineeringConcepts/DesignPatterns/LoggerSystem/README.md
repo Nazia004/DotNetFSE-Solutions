@@ -2,19 +2,31 @@
 
 ## Objective
 
-Implement the Singleton Design Pattern in C#.
+Ensure that only one instance of the Logger class exists throughout the application.
 
-## Concepts Used
+## Pattern Type
 
-- Singleton Pattern
-- Static Members
-- Private Constructor
+Creational Design Pattern
 
-## Files
+## Components
 
-- Logger.cs
-- Program.cs
+- Logger
+- Program
+
+## How It Works
+
+The Logger class has a private constructor and a static instance. The GetInstance() method always returns the same object.
 
 ## Output
 
-The application creates only one Logger object and reuses it.
+```text
+Log: First Log Message
+Log: Second Log Message
+Both logger instances are the same.
+```
+
+## Benefits
+
+- Single shared instance
+- Controlled object creation
+- Reduced memory usage

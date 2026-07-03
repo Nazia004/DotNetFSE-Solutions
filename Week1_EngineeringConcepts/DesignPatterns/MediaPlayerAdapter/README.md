@@ -1,31 +1,37 @@
-# Adapter Pattern Example
+# Adapter Pattern
 
 ## Objective
 
-Demonstrate the Adapter Design Pattern using C#.
+Allow incompatible media player interfaces to work together.
 
-## Description
+## Pattern Type
 
-The Adapter Pattern allows classes with incompatible interfaces to work together by introducing an adapter class.
+Structural Design Pattern
 
-## Classes
+## Components
 
-- MediaPlayer (Target Interface)
-- AdvancedMediaPlayer (Adaptee Interface)
-- Mp4Player
-- VlcPlayer
+- MediaPlayer
+- AdvancedMediaPlayer
 - MediaAdapter
 - AudioPlayer
+- Mp4Player
+- VlcPlayer
+
+## How It Works
+
+The adapter converts requests from AudioPlayer into the appropriate advanced media player implementation.
 
 ## Output
 
-```
+```text
 Playing mp3 file: song.mp3
 Playing mp4 file: movie.mp4
 Playing vlc file: video.vlc
 Invalid media format.
 ```
 
-## Pattern Used
+## Benefits
 
-Structural Design Pattern
+- Reuses existing classes
+- Improves compatibility
+- Reduces code changes
