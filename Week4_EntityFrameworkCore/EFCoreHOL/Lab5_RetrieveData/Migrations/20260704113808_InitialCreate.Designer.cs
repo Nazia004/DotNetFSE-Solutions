@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RetailInventory.Data;
+using Lab5_RetrieveData.Data;
 
 #nullable disable
 
-namespace RetailInventory.Migrations
+namespace Lab5_RetrieveData.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20260704113808_InitialCreate")]

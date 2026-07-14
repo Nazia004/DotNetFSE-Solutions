@@ -1,58 +1,42 @@
-﻿using RetailInventory.Data;
-using RetailInventory.Models;
+﻿using Lab5_RetrieveData.Data;
+using Lab5_RetrieveData.Models;
 
 AppDbContext context = new AppDbContext();
 
 if (!context.Categories.Any())
 {
-    var electronics = new Category
-    {
-        Name = "Electronics"
-    };
+    var electronics = new Category { Name = "Electronics" };
+    var groceries = new Category { Name = "Groceries" };
 
-    var grocery = new Category
-    {
-        Name = "Grocery"
-    };
-
-    context.Categories.Add(electronics);
-    context.Categories.Add(grocery);
-
+    context.Categories.AddRange(electronics, groceries);
     context.SaveChanges();
 
-    context.Products.Add(new Product
-    {
-        Name = "Laptop",
-        Price = 65000,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Mouse",
-        Price = 800,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Rice",
-        Price = 70,
-        CategoryId = grocery.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Milk",
-        Price = 55,
-        CategoryId = grocery.Id
-    });
+    context.Products.AddRange(
+        new Product
+        {
+            Name = "Laptop",
+            Price = 65000,
+            CategoryId = electronics.Id
+        },
+        new Product
+        {
+            Name = "Keyboard",
+            Price = 1200,
+            CategoryId = electronics.Id
+        },
+        new Product
+        {
+            Name = "Rice",
+            Price = 80,
+            CategoryId = groceries.Id
+        });
 
     context.SaveChanges();
-
-    Console.WriteLine("Data Inserted Successfully.");
 }
-else
+
+Console.WriteLine("Products:");
+
+foreach (var product in context.Products)
 {
-    Console.WriteLine("Data already exists.");
+    Console.WriteLine($"{product.Id} | {product.Name} | ₹{product.Price}");
 }

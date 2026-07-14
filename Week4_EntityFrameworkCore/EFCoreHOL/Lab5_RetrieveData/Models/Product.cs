@@ -1,4 +1,4 @@
-namespace RetailInventory.Models;
+namespace Lab5_RetrieveData.Models;
 
 public class Product
 {
