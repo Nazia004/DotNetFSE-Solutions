@@ -1,4 +1,4 @@
-namespace RetailInventory.Models;
+namespace Lab3_Migrations.Models;
 
 public class Category
 {

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace RetailInventory.Migrations
+namespace Lab3_Migrations.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

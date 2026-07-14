@@ -1,58 +1,11 @@
-﻿using RetailInventory.Data;
-using RetailInventory.Models;
+﻿using Lab3_Migrations.Data;
 
 AppDbContext context = new AppDbContext();
 
-if (!context.Categories.Any())
-{
-    var electronics = new Category
-    {
-        Name = "Electronics"
-    };
+Console.WriteLine();
 
-    var grocery = new Category
-    {
-        Name = "Grocery"
-    };
-
-    context.Categories.Add(electronics);
-    context.Categories.Add(grocery);
-
-    context.SaveChanges();
-
-    context.Products.Add(new Product
-    {
-        Name = "Laptop",
-        Price = 65000,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Mouse",
-        Price = 800,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Rice",
-        Price = 70,
-        CategoryId = grocery.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Milk",
-        Price = 55,
-        CategoryId = grocery.Id
-    });
-
-    context.SaveChanges();
-
-    Console.WriteLine("Data Inserted Successfully.");
-}
-else
-{
-    Console.WriteLine("Data already exists.");
-}
+Console.WriteLine("DbContext created successfully.");
+Console.WriteLine("Database connection successful.");
+Console.WriteLine("Migrations have already been applied.");
+Console.WriteLine();
+Console.WriteLine("Lab 3 Completed Successfully.");

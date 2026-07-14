@@ -12,6 +12,6 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(
-            "Server=(localdb)\\MSSQLLocalDB;Database=RetailInventoryDB;Trusted_Connection=True;TrustServerCertificate=True");
+            "Server=(localdb)\\MSSQLLocalDB;Database=RetailInventoryLab4DB;Trusted_Connection=True;TrustServerCertificate=True");
     }
 }
