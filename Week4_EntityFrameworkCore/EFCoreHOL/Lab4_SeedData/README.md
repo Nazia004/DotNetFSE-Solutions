@@ -1,24 +1,17 @@
-# EF Core 8.0 Hands-On
+# Lab 4 - Data Seeding
 
-## Completed Labs
+## Objective
 
-### Lab 1
-- Understanding ORM with EF Core
+Insert initial data into the SQL Server database using Entity Framework Core.
 
-### Lab 2
-- Created AppDbContext
-- Added Category and Product entities
-- Configured SQL Server LocalDB
+## Concepts Covered
 
-### Lab 3
-- Installed EF Core CLI
-- Created InitialCreate migration
-- Applied migration to RetailInventoryDB
+- Data Seeding
+- DbContext
+- SaveChanges()
+- Entity Framework Core
+- SQL Server
 
-## Technologies
-- .NET 10
-- Entity Framework Core 10
-- SQL Server LocalDB
-- Visual Studio Code
+## Status
 
-Status: Labs 1–3 Completed
+Completed
