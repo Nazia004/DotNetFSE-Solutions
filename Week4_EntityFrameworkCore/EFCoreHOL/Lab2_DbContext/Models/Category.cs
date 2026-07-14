@@ -1,4 +1,4 @@
-namespace RetailInventory.Models;
+namespace Lab2_DbContext.Models;
 
 public class Category
 {

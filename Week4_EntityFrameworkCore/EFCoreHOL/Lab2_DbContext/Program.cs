@@ -1,58 +1,15 @@
-﻿using RetailInventory.Data;
-using RetailInventory.Models;
+﻿using Lab2_DbContext.Data;
 
-AppDbContext context = new AppDbContext();
+using AppDbContext context = new AppDbContext();
 
-if (!context.Categories.Any())
-{
-    var electronics = new Category
-    {
-        Name = "Electronics"
-    };
+Console.WriteLine();
+Console.WriteLine("DbContext created successfully.");
+Console.WriteLine("Connection to SQL Server configured.");
 
-    var grocery = new Category
-    {
-        Name = "Grocery"
-    };
+Console.WriteLine();
+Console.WriteLine("Entity Sets:");
+Console.WriteLine($"Categories : {context.Categories.GetType().Name}");
+Console.WriteLine($"Products   : {context.Products.GetType().Name}");
 
-    context.Categories.Add(electronics);
-    context.Categories.Add(grocery);
-
-    context.SaveChanges();
-
-    context.Products.Add(new Product
-    {
-        Name = "Laptop",
-        Price = 65000,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Mouse",
-        Price = 800,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Rice",
-        Price = 70,
-        CategoryId = grocery.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Milk",
-        Price = 55,
-        CategoryId = grocery.Id
-    });
-
-    context.SaveChanges();
-
-    Console.WriteLine("Data Inserted Successfully.");
-}
-else
-{
-    Console.WriteLine("Data already exists.");
-}
+Console.WriteLine();
+Console.WriteLine("Lab 2 Completed Successfully.");

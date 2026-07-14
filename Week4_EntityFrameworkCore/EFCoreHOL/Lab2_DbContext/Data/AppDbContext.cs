@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using RetailInventory.Models;
+using Lab2_DbContext.Models;
 
-namespace RetailInventory.Data;
+namespace Lab2_DbContext.Data;
 
 public class AppDbContext : DbContext
 {
@@ -12,6 +12,6 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(
-            "Server=(localdb)\\MSSQLLocalDB;Database=RetailInventoryDB;Trusted_Connection=True;TrustServerCertificate=True");
+            "Server=(localdb)\\MSSQLLocalDB;Database=RetailInventoryLab2DB;Trusted_Connection=True;TrustServerCertificate=True");
     }
 }
