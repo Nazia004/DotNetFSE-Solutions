@@ -1,58 +1,12 @@
-﻿using RetailInventory.Data;
-using RetailInventory.Models;
+﻿Console.WriteLine();
+Console.WriteLine("ORM stands for Object Relational Mapper.");
+Console.WriteLine("Entity Framework Core is Microsoft's ORM.");
+Console.WriteLine();
+Console.WriteLine("Benefits of ORM:");
+Console.WriteLine("1. Reduces SQL writing");
+Console.WriteLine("2. Maps C# classes to database tables");
+Console.WriteLine("3. Improves productivity");
+Console.WriteLine("4. Supports LINQ queries");
 
-AppDbContext context = new AppDbContext();
-
-if (!context.Categories.Any())
-{
-    var electronics = new Category
-    {
-        Name = "Electronics"
-    };
-
-    var grocery = new Category
-    {
-        Name = "Grocery"
-    };
-
-    context.Categories.Add(electronics);
-    context.Categories.Add(grocery);
-
-    context.SaveChanges();
-
-    context.Products.Add(new Product
-    {
-        Name = "Laptop",
-        Price = 65000,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Mouse",
-        Price = 800,
-        CategoryId = electronics.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Rice",
-        Price = 70,
-        CategoryId = grocery.Id
-    });
-
-    context.Products.Add(new Product
-    {
-        Name = "Milk",
-        Price = 55,
-        CategoryId = grocery.Id
-    });
-
-    context.SaveChanges();
-
-    Console.WriteLine("Data Inserted Successfully.");
-}
-else
-{
-    Console.WriteLine("Data already exists.");
-}
+Console.WriteLine();
+Console.WriteLine("Lab 1 Completed.");

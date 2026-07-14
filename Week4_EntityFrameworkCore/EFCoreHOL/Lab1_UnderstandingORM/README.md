@@ -1,24 +1,12 @@
-# EF Core 8.0 Hands-On
+# Lab 1 - Understanding ORM
 
-## Completed Labs
+## Objective
+Understand the concept of ORM and Entity Framework Core.
 
-### Lab 1
-- Understanding ORM with EF Core
+## Concepts Covered
+- ORM
+- Entity Framework Core
+- Advantages of ORM
 
-### Lab 2
-- Created AppDbContext
-- Added Category and Product entities
-- Configured SQL Server LocalDB
-
-### Lab 3
-- Installed EF Core CLI
-- Created InitialCreate migration
-- Applied migration to RetailInventoryDB
-
-## Technologies
-- .NET 10
-- Entity Framework Core 10
-- SQL Server LocalDB
-- Visual Studio Code
-
-Status: Labs 1–3 Completed
+## Output
+Displays basic information about ORM.
