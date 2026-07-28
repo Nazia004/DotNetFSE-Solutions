@@ -1,6 +1,46 @@
 <h2>Welcome to Student Course Portal</h2>
 
-<p>
-  This application demonstrates Angular fundamentals through a simple student
-  portal.
-</p>
+<p>This application demonstrates Angular Data Binding.</p>
+
+<hr>
+
+<h3>Interpolation</h3>
+
+<p>{{ portalName }}</p>
+
+<hr>
+
+<h3>Property Binding</h3>
+
+<button [disabled]="!isPortalActive">
+    Enroll Now
+</button>
+
+<hr>
+
+<h3>Event Binding</h3>
+
+<button (click)="onEnrollClick()">
+    Click Me
+</button>
+
+<p>{{ message }}</p>
+
+<hr>
+
+<h3>Two-Way Data Binding</h3>
+
+<input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search course">
+
+<p>You searched: {{ searchTerm }}</p>
+
+<hr>
+
+<app-course-list [courses]="courses"></app-course-list>
+
+<hr>
+
+<app-student-profile></app-student-profile>

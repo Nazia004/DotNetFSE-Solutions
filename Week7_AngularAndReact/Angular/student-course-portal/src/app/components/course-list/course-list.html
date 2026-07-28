@@ -1,8 +1,7 @@
-<h3>Available Courses</h3>
+<h2>Available Courses</h2>
 
 <ul>
-  <li>Angular</li>
-  <li>React</li>
-  <li>.NET Core</li>
-  <li>SQL Server</li>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
 </ul>
