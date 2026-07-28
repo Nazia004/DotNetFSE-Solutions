@@ -3,16 +3,18 @@ import { FormsModule } from '@angular/forms';
 import { CourseList } from '../course-list/course-list';
 import { StudentProfile } from '../student-profile/student-profile';
 import { CourseDashboard } from '../course-dashboard/course-dashboard';
+import { CoursePipes } from '../course-pipes/course-pipes';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    FormsModule,
-    CourseList,
-    StudentProfile,
-    CourseDashboard
-  ],
+  FormsModule,
+  CourseList,
+  StudentProfile,
+  CourseDashboard,
+  CoursePipes
+],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
