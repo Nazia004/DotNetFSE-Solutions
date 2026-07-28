@@ -1,0 +1,21 @@
+<h2>Structural Directives Demo</h2>
+
+<button (click)="showCourses = !showCourses">
+  Toggle Courses
+</button>
+
+<hr>
+
+<div *ngIf="showCourses">
+  <h3>Available Courses</h3>
+
+  <ul>
+    <li *ngFor="let course of courses">
+      {{ course.id }} - {{ course.name }} ({{ course.duration }})
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!showCourses">
+  <p>No courses to display.</p>
+</div>

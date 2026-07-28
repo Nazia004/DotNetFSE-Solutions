@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CourseList } from '../course-list/course-list';
 import { StudentProfile } from '../student-profile/student-profile';
+import { CourseDashboard } from '../course-dashboard/course-dashboard';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ import { StudentProfile } from '../student-profile/student-profile';
   imports: [
     FormsModule,
     CourseList,
-    StudentProfile
+    StudentProfile,
+    CourseDashboard
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'
