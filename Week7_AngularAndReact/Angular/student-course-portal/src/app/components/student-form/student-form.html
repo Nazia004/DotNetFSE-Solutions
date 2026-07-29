@@ -1,13 +1,19 @@
 <h2>Student Registration</h2>
 
-<form (ngSubmit)="onSubmit()">
+<form #studentForm="ngForm" (ngSubmit)="onSubmit()">
 
   <label>Name</label><br>
   <input
     type="text"
     name="name"
     [(ngModel)]="student.name"
-    required>
+    #name="ngModel"
+    required
+  >
+
+  <div *ngIf="name.invalid && name.touched">
+    <small style="color:red;">Name is required</small>
+  </div>
 
   <br><br>
 
@@ -16,25 +22,56 @@
     type="email"
     name="email"
     [(ngModel)]="student.email"
-    required>
+    #email="ngModel"
+    required
+    email
+  >
+
+  <div *ngIf="email.invalid && email.touched">
+
+    <small
+      *ngIf="email.errors?.['required']"
+      style="color:red;">
+      Email is required
+    </small>
+
+    <small
+      *ngIf="email.errors?.['email']"
+      style="color:red;">
+      Enter a valid email
+    </small>
+
+  </div>
 
   <br><br>
 
   <label>Course</label><br>
+
   <select
     name="course"
-    [(ngModel)]="student.course">
+    [(ngModel)]="student.course"
+    #course="ngModel"
+    required>
 
+    <option value="">Select Course</option>
     <option>Angular</option>
     <option>React</option>
     <option>.NET Core</option>
-    <option>Azure</option>
+    <option>SQL Server</option>
 
   </select>
 
+  <div *ngIf="course.invalid && course.touched">
+    <small style="color:red;">
+      Please select a course
+    </small>
+  </div>
+
   <br><br>
 
-  <button type="submit">
+  <button
+    type="submit"
+    [disabled]="studentForm.invalid">
     Register
   </button>
 
@@ -44,6 +81,6 @@
 
 <h3>Preview</h3>
 
-<p>Name : {{ student.name }}</p>
-<p>Email : {{ student.email }}</p>
-<p>Course : {{ student.course }}</p>
+<p>Name : {{student.name}}</p>
+<p>Email : {{student.email}}</p>
+<p>Course : {{student.course}}</p>
